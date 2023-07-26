@@ -5,10 +5,14 @@ let restartbtn = document.createElement("button");
 let timerValue = 30;
 let timerInterval;
 
-restartbtn.innerText = "🔄";
+countDownElement.style.display = "none";
+restartbtn.innerText = "Time Up"; //
 restartbtn.style.display = "block";
 
 function startTimer() {
+  countDownElement.style.display = "block";
+  timerValue = 30;
+  countDownElement.innerText = timerValue;
   start.style.display = "none";
   timerInterval = setInterval(updateTimer, 1000);
   timerDiv.style.backgroundColor = "#38e54d";
@@ -26,9 +30,7 @@ function updateTimer() {
   if (timerValue < 0) {
     clearInterval(timerInterval);
     timerDiv.style.backgroundColor = "red";
-    countDownElement.style.color = "white";
-    timerValue = `Time Out!`;
-    countDownElement.innerText = timerValue;
+    countDownElement.style.display = "none";
     restartbtn.style.display = "block";
     timerDiv.appendChild(restartbtn);
   }
@@ -37,7 +39,7 @@ function updateTimer() {
 function restartTimer() {
   timerValue = 30;
   countDownElement.innerText = timerValue;
-  countDownElement.style.color = "black";
+  countDownElement.style.display = "none";
   restartbtn.style.display = "none";
   start.style.display = "block";
   timerDiv.style.backgroundColor = "#2192FF";

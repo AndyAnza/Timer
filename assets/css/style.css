@@ -1,17 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Tektur&display=swap");
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: black;
+  font-family: "Tektur", sans-serif;
 }
 p {
   font-size: 100px;
 }
 
 button {
-  background-color: aliceblue;
-  color: hotpink;
+  border: none;
+  background-color: transparent;
+  font-size: large;
 }
 
 #container {
@@ -19,7 +22,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: aliceblue;
+  background-color: #2192ff;
   padding: 6px;
   height: 500px;
   width: 500px;

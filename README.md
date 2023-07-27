@@ -1,6 +1,6 @@
 # Timer
 
-Simple JavaScript 30 seconds timer.
+Simple JavaScript 30 seconds timer. Created just for fun.
 
 ## URL
 

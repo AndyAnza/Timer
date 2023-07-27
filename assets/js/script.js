@@ -26,9 +26,15 @@ function updateTimer() {
     countDownElement.style.color = "red";
   }
 
+  if (timerValue < 5) {
+    countDownElement.classList.add("flashing");
+    // timerDiv.style.backgroundColor = "red";
+  }
+
   if (timerValue < 0) {
     clearInterval(timerInterval);
     timerDiv.style.backgroundColor = "red";
+    countDownElement.classList.remove("flashing");
     countDownElement.style.display = "none";
     restartbtn.style.display = "block";
     timerDiv.appendChild(restartbtn);

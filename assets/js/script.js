@@ -11,12 +11,11 @@ restartbtn.style.display = "block";
 
 function startTimer() {
   countDownElement.style.display = "block";
-  timerValue = 30;
   countDownElement.innerText = timerValue;
   start.style.display = "none";
-  timerInterval = setInterval(updateTimer, 1000);
   timerDiv.style.backgroundColor = "#38e54d";
   countDownElement.style.color = "black";
+  timerInterval = setInterval(updateTimer, 1000);
 }
 
 function updateTimer() {

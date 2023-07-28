@@ -10,17 +10,18 @@ restartbtn.innerText = "Time Up"; //
 restartbtn.style.display = "block";
 
 function startTimer() {
+  start.style.display = "none";
   countDownElement.style.display = "block";
   countDownElement.innerText = timerValue;
-  start.style.display = "none";
   timerDiv.style.backgroundColor = "#38e54d";
   countDownElement.style.color = "black";
   timerInterval = setInterval(updateTimer, 1000);
 }
 
 function updateTimer() {
+  timerValue--; ///IMPORTANT this goes first so that we can avoid delay when the timer starts
   countDownElement.innerText = timerValue;
-  timerValue--;
+  // console.log(timerValue);
 
   if (timerValue < 10) {
     countDownElement.style.color = "red";
@@ -28,7 +29,6 @@ function updateTimer() {
 
   if (timerValue < 5) {
     countDownElement.classList.add("flashing");
-    // timerDiv.style.backgroundColor = "red";
   }
 
   if (timerValue < 0) {
